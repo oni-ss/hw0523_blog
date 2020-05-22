@@ -1,53 +1,102 @@
 {%load static%}
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+      @font-face { font-family: 'yg-jalnan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); font-weight: normal; font-style: normal; }
+      @font-face { font-family: '777Balsamtint'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/777Balsamtint.woff') format('woff'); font-weight: normal; font-style: normal; }
+    </style>
 </head>
 
 
 <body>
     <!--navbar of bootstrap-->
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #5091a5;">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="{%url 'home'%}">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="{%url 'new'%}">글쓰기</a>
-            <a class="nav-item nav-link" href="{%url 'portfolio'%}">Portfolio</a>
-            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #5091a5; font-family: '777Balsamtint';">
+      <a class="navbar-brand" style="font-size:25px;">손시온의 블로그</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="{%url 'home'%}" style="font-size:25px;">홈 <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="{%url 'new'%}" style="font-size:25px;">글쓰기</a>
+          <a class="nav-item nav-link" href="{%url 'portfolio'%}" style="font-size:25px;">영화추천</a>
+          <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true" style="font-size:20px;">제 블로그에 오신 걸 환영합니다. 좋은 하루 되세요 :)</a>
         </div>
-      </nav>
+      </div>
+    </nav>
 
     <!--bootstrap-->
     <main role="main">
 
         <section class="jumbotron text-center">
           <div class="container">
-            <h1 class="jumbotron-heading">My Portfolio</h1><br>
-            <p class="lead text-muted">지금까지 해온 포트폴리오입니다. 앞으로 더 많은 포트폴리오를 만들어보세요!</p>
+            <h1 class="jumbotron-heading" style="font-family:'yg-jalnan'; font-size:50px;">영화 추천</h1><br>
+            <p class="lead text-muted" style="font-family: '777Balsamtint'; font-size:25px;">영화를 추천해드립니다. 제가 왓챠에서 5점과 4.5점으로 평가한 작품들을 소개합니다.</p>
           </div>
         </section>
   
-        <div class="album py-5 bg-light">
+        <div class="album py-5 bg-light" style="font-family: '777Balsamtint';"> 
           <div class="container">
             <div class="row">
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img src="{%static 'lifeisbeautiful.jpg'%}" height=300 alt="영화사진">
+                  <img src="{%static 'lifeisbeautiful.jpg'%}" height=400 alt="영화사진">
                   <div class="card-body">
-                    <h4 class="card-text">인생은 아름다워</h4>
+                    <h3 class="card-text">인생은 아름다워</h3>
                     <p class="card-text">로베르토 베니니 감독</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <img src="{%static 'prideandprejudice.jpg'%}" height=400 alt="영화사진">
+                  <div class="card-body">
+                    <h3 class="card-text">오만과편견</h3>
+                    <p class="card-text">조 라이트 감독</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <img src="{%static 'cinemaparadiso.jpg'%}" height=400 alt="영화사진">
+                  <div class="card-body">
+                    <h3 class="card-text">시네마천국</h3>
+                    <p class="card-text">쥬세페 토르나토레 감독</p>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <img src="{%static 'titanic.jpg'%}" height=400 alt="영화사진">
+                  <div class="card-body">
+                    <h3 class="card-text">타이타닉</h3>
+                    <p class="card-text">제임스 카메론 감독</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <img src="{%static 'secret.jpg'%}" height=400 alt="영화사진">
+                  <div class="card-body">
+                    <h3 class="card-text">말할 수 없는 비밀</h3>
+                    <p class="card-text">주걸륜 감독</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <img src="{%static 'silencelambs.jpg'%}" height=400 alt="영화사진">
+                  <div class="card-body">
+                    <h3 class="card-text">양들의 침묵</h3>
+                    <p class="card-text">조나단 드미 감독</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-  
-      </main>
+    </main>
 
 
 </body>
